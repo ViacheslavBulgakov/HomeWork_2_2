@@ -1,19 +1,31 @@
 package HW_2_2;
 
-public class Truck {
+public class Truck extends Vehicle {
+    private String modelName;
+    private int wheelsCount;
+    private int engine;
+    private int trailer;
 
-    public String modelName;
-    public int wheelsCount;
-
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    public Truck(String modelName, int wheelsCount, int engine, int trailer) {
+        super(modelName, wheelsCount);
+        this.engine = engine;
+        this.trailer = trailer;
     }
 
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+    public int getEngine() {
+        return engine;
     }
 
-    public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
+    public void setEngine(int engine) {
+        this.engine = engine;
     }
+
+    public int getTrailer() {
+        return trailer;
+    }
+
+    public void setTrailer(int trailer) {
+        this.trailer = trailer;
+    }
+
 }
