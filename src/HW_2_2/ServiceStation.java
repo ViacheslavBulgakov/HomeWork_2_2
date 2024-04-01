@@ -1,27 +1,32 @@
 package HW_2_2;
 
-import HW_2_2.Bicycle;
-import HW_2_2.Car;
-
 public class ServiceStation {
-    public void check(Car car, Bicycle bicycle, Truck truck) {
-        if (car != null) {
-            System.out.println("Обслуживаем " + car.modelName);
-            for (int i = 0; i < car.wheelsCount; i++) {
-                car.updateTyre();
+    public void service(String modelName, int wheelsCount, int engine, int trailer) {
+        if (modelName != null) {
+            System.out.println(" Обслуживаем " + modelName);
+            for (int i = 0; i < wheelsCount; i++) {
+                System.out.println("Меняем покрышку ");
             }
-            car.checkEngine();
-        } else if (truck != null) {
-            System.out.println("Обслуживаем " + truck.modelName);
-            for (int i = 0; i < truck.wheelsCount; i++) {
-                truck.updateTyre();
+            System.out.println("Проверяем двигатель ");
+            System.out.println("Проверяем прицеп ");
+        }
+    }
+
+    public void service(String modelName, int wheelsCount, int engine) {
+        if (modelName != null) {
+            System.out.println(" Обслуживаем " + modelName);
+            for (int i = 0; i < wheelsCount; i++) {
+                System.out.println("Меняем покрышку ");
             }
-            truck.checkEngine();
-            truck.checkTrailer();
-        } else if (bicycle != null) {
-            System.out.println("Обслуживаем " + bicycle.modelName);
-            for (int i = 0; i < bicycle.wheelsCount; i++) {
-                bicycle.updateTyre();
+            System.out.println("Проверяем двигатель ");
+        }
+    }
+
+    public void service(String modelName, int wheelsCount) {
+        if (modelName != null) {
+            System.out.println(" Обслуживаем " + modelName);
+            for (int i = 0; i < wheelsCount; i++) {
+                System.out.println("Меняем покрышку ");
             }
         }
     }
